@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Introduction Packet - BYU</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@600;800&display=swap');
+
+        :root {
+            --primary: #002E5D; /* BYU Navy */
+            --secondary: #666666;
+            --accent: #0062B8;
+            --bg-color: #f4f4f9;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+        }
+
+        /* Container to simulate a document page */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            background: white;
+            padding: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* Header Section */
+        header {
+            text-align: center;
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .intro-text {
+            font-size: 1.1rem;
+            color: var(--secondary);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* FLEX Layout to Fill Space and Center Last Item */
+        .team-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* This centers the last item if it's on a row alone */
+            gap: 30px;
+        }
+
+        /* Individual Member Card */
+        .member-card {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            /* Sizing logic: roughly 2 columns with a gap */
+            flex: 0 1 calc(50% - 20px); 
+            min-width: 400px; /* Prevents them from getting too squished */
+        }
+
+        .member-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+
+        .card-header {
+            background-color: var(--primary);
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card-header h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.25rem;
+            margin: 0;
+        }
+
+        .card-body {
+            padding: 20px;
+            flex-grow: 1; /* Pushes button to bottom */
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Image Placeholder styling - UPDATED HEIGHT */
+        .image-placeholder {
+            width: 100%;
+            height: 450px; /* Taller for Portrait Photos */
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden; /* Ensures image doesn't spill out */
+            border-bottom: 1px solid #eee;
+        }
+        
+        .image-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures portrait photos cover the area nicely */
+            object-position: top center; /* Focuses on faces usually at top */
+        }
+
+        .bio-text {
+            font-size: 0.95rem;
+            color: #444;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* Button Styling for Resumes */
+        .resume-btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: auto; /* Aligns to bottom of card */
+            transition: background 0.3s;
+        }
+
+        .resume-btn:hover {
+            background-color: var(--primary);
+        }
+
+        /* Specific formatting for the AI note */
+        .note {
+            font-size: 0.75rem;
+            color: #999;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #999;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        /* Print optimization */
+        @media print {
+            body { background: white; }
+            .container { box-shadow: none; margin: 0; width: 100%; max-width: 100%; }
+            .resume-btn { border: 1px solid #000; color: #000; background: none; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Team Introduction Packet</h1>
+        <p class="intro-text">
+            We are a dedicated team from Brigham Young University, excited to collaborate with your organization. This packet introduces the talented individuals who will be working with you, providing a brief overview of their professional backgrounds and links to their resumes. We are eager to contribute our skills and look forward to a productive partnership.
+        </p>
+    </header>
+
+    <div class="team-grid">
+
+        <!-- NOAH -->
+        <div class="member-card">
+            <div class="image-placeholder">
+                <img src="images/Noah_Picture.jpg" alt="Noah Wahlquist">
+            </div>
+            <div class="card-header">
+                <h2>Noah Wahlquist</h2>
+            </div>
+            <div class="card-body">
+                <p class="bio-text">
+                    Though only 18 years old, Noah Wahlquist is an individual who operates at an intersection in data architecture and organizational leadership. As a motivated achiever and enthusiastic learner, he graduated high school with two associate’s degrees (in Mathematics & Economics) and a Professional Certificate in Business Analytics. He is currently pursuing a B.S. in Information Systems at Brigham Young University, with minors in Civic Engagement Leadership, Mathematics, and Global & Community Impact. He views this as an opportunity to acquire greater skills to help optimize work processes, transform raw data into decision-making insights, and become a high-level leader; His skill development approach is characterized by simultaneous "Macro-Vision” and “Micro-Optimization." As a former nonprofit board director, and a program facilitator for several community organizations, he is eager to utilize his expertise to help Cities Strong with their impact evaluation and reporting.
+                </p>
+                <a href="https://drive.google.com/file/d/11V96kS5clMfMlRcya1xdNLNSrwMFcG2-/view?usp=sharing" class="resume-btn">View Noah Wahlquist's Resume</a>
+            </div>
+        </div>
+
+        <!-- PAUL -->
+        <div class="member-card">
+            <div class="image-placeholder">
+                <img src="images/Paul_Picture.png" alt="Paul Probst">
+            </div>
+            <div class="card-header">
+                <h2>Paul Probst</h2>
+            </div>
+            <div class="card-body">
+                <p class="bio-text">
+                    Paul Probst is a Data Science student from Boston, Massachusetts. He loves using data to find patterns, solve problems, and make predictions for the future. His first summer internship was with a large Fortune 500 company building machine learning tools to predict natural disasters from satellite data. He has also worked for a small start-up distribution company, doing their supply chain analytics. He’s currently working as a data analyst for BYU administration and on a couple of research projects around Utah. Paul is excited to help Cities Strong have a better understanding of their impact on the community. A lot of “good” done is subjective, but he’s interested to see how much of it we can measure and track. In his free time he loves backpacking and deep-sea fishing.
+                </p>
+                <a href="https://drive.google.com/file/d/1c6c_Jkjz0CCBiltTXHYhL231SHY7uicu/view?usp=sharing" class="resume-btn">View Paul Probst's Resume</a>
+            </div>
+        </div>
+
+        <!-- ANDY -->
+        <div class="member-card">
+            <div class="image-placeholder">
+                <img src="images/Andy_Picture.jpg" alt="Andy Liljenquist">
+            </div>
+            <div class="card-header">
+                <h2>Andy Liljenquist</h2>
+            </div>
+            <div class="card-body">
+                <p class="bio-text">
+                    Andy Liljenquist is a film producer and emerging impact storyteller with experience spanning creative production, marketing, and data-informed strategy. He is nearing graduation from Brigham Young University, where he studies Media Arts with an emphasis in Producing and minors in Business. Andy has overseen the production of multiple award-winning short films and documentary projects, managing teams, budgets, and timelines while maintaining a strong attention to detail and outcomes. Beyond filmmaking, Andy has worked as a content creator for a software startup and as a marketing specialist for a nationally recognized children’s media brand, where he analyzed revenue trends, supported audience growth, and helped translate creative work into measurable performance. He is particularly interested in how data, storytelling, and systems design can work together to drive accountability and meaningful social change. At Cities Strong, Andy is excited to support efforts to better define, measure, and communicate the real-world impact of community interventions. In his free time, he enjoys skiing, team sports, and reading.
+                </p>
+                <a href="https://drive.google.com/file/d/14QEuLck1Q7X0PEdWAR1iT0Ax66XMh7pF/view?usp=sharing" class="resume-btn">View Andy Liljenquist's Resume</a>
+            </div>
+        </div>
+
+        <!-- ATTALIE -->
+        <div class="member-card">
+            <div class="image-placeholder">
+                <img src="images/Attalie_Picture.jpg" alt="Attalie Fielding">
+            </div>
+            <div class="card-header">
+                <h2>Attalie Fielding</h2>
+            </div>
+            <div class="card-body">
+                <p class="bio-text">
+                    Attalie Fielding is a senior at BYU studying Psychology with a Spanish minor. She has experience as a research assistant in cognition and is currently conducting her own study in collaboration with her professor in which she is synthesizing a wide body of research, authoring a registered report, and preparing stimuli. In discovering her passion for research and community impact, she plans to earn a masters in public policy with the desire to participate in the data analysis and creation of interventions to best improve the community. She believes that her career goals align well with the aims and purposes of Cities Strong. She loves that Cities Strong centers directly collaborates with government agencies to improve the community in many ways including renovating neighborhoods, improving the education system, and assisting in the field of mental health. She believes she could be an asset in this internship and learn skills that are directly applicable to public policy. Some of Attalie’s hobbies are playing many different sports, working out, rock climbing, reading, and being in nature.
+                </p>
+                <a href="https://byu-my.sharepoint.com/:w:/g/personal/agf31_byu_edu/IQBSL_u4aGZdRLWPkuJbw2x6AYeeHArt6ls3X-7SzrX_RBs?e=8gvUUu" class="resume-btn">View Attalie Fielding's Resume</a>
+            </div>
+        </div>
+
+        <!-- ETHAN -->
+        <div class="member-card">
+            <div class="image-placeholder">
+                <img src="images/Ethan_Picture.jpg" alt="Ethan">
+            </div>
+            <div class="card-header">
+                <h2>Ethan</h2>
+            </div>
+            <div class="card-body">
+                <p class="bio-text">
+                    Ethan is the Partner Liaison for our team. He will be in charge of maintaining communication with the partner, lining up meetings and forwarding on agendas. He will be the point of contact for the partner. Ethan is from the beautiful hills of Bountiful, Utah! He served his mission in California and Argentina! After his mission he started working in construction as an Assistant Superintendent and is now working for a real estate development company in Nevada! Ethan is studying Construction Management at BYU! If you play Ethan in any sports, no matter his skill, he will try his hardest to win. He loves sports, the outdoors and family. He spends his summers volunteering with Humanitarian Expeditions (HXP) and has been to Costa Rica, Peru, and Bolivia, and is going to Guatemala this summer!
+                </p>
+                <a href="https://drive.google.com/file/d/16RG-Vd_BHdKM8KBWQ4A9v1ywbFdqX2ha/view?usp=drive_link" class="resume-btn">View Ethan's Resume</a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; Brigham Young University Team Packet</p>
+    </footer>
+</div>
+
+</body>
+</html>
